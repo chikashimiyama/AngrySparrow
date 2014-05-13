@@ -26,8 +26,8 @@ namespace AngrySparrow {
         void updatePhaseIncrement(); ///< internal function for calculating phaseIncrement from Freq
         void getNext(); ///< advance the phase and get the value of phase
     
-        vector<float> *frequencyVectorPtr; ///< a pointer to a vector of frequencies
-        vector<float> outputVector; ///< output vector
+        std::vector<float> *frequencyVectorPtr; ///< a pointer to a vector of frequencies
+        std::vector<float> outputVector; ///< output vector
         
         virtual void performDSP_CR() = 0; ///< abstract function for internal DSP routine for control rate
         virtual void performDSP_AR() = 0; ///< abstract function for internal DSP routine for audio rate
@@ -38,7 +38,7 @@ namespace AngrySparrow {
         void setAudioRateMode(bool audioRateMode); ///< set mode of the oscillator
         bool getAudioRateMode(); ///< get current mode of the osciilator
         void setFrequency(float frequency); ///< set the control rate frequency
-        void setFrequencyVectorPtr(vector<float> *frequencyVectorPtr); /// set the vector of audio rate frequency
+        void setFrequencyVectorPtr(std::vector<float> *frequencyVectorPtr); /// set the vector of audio rate frequency
         float getFrequency(); ///< get the control rate frequency
         float getPhaseIncrement(); ///< get current phase increment
         
@@ -46,7 +46,7 @@ namespace AngrySparrow {
         void resetPhase(); ///< set the phase to 0
         float getPhase(); ///< get current phase
         
-        virtual vector<float> getNextVector() = 0; ///< virtual abstract function for generating audio vectors. should be implmeneted in the subclasses.
+        virtual std::vector<float> getNextVector() = 0; ///< virtual abstract function for generating audio vectors. should be implmeneted in the subclasses.
     };
     
     inline void Oscillator::updatePhaseIncrement(){
@@ -82,7 +82,7 @@ namespace AngrySparrow {
         updatePhaseIncrement();
     }
     
-    inline void Oscillator::setFrequencyVectorPtr(vector<float> *frequencyVectorPtr){
+    inline void Oscillator::setFrequencyVectorPtr(std::vector<float> *frequencyVectorPtr){
         Oscillator::frequencyVectorPtr = frequencyVectorPtr;
     }
     

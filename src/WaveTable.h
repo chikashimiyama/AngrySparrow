@@ -8,11 +8,18 @@
 #ifndef WaveTable_h
 #define WaveTable_h
 
+namespace AngrySparrow{
 
-class WaveTable : public Oscillator{
-public:
-    
+	/**
+	* @brief simple wave table (table lookup) synthesizer
+	*/
+	class WaveTable : public Oscillator{
+	private:
+		vector<float>
+	public:
+	    
 
-};
+	};
 
+}
 #endif
