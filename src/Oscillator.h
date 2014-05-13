@@ -1,3 +1,8 @@
+/*
+ * @ingroup AngrySparrow
+ * @authors Chikashi Miyama
+ */
+
 #ifndef Oscillator_h
 #define Oscillator_h
 
@@ -6,8 +11,11 @@
 
 namespace AngrySparrow {
     
-    class Oscillator{
     
+    /*
+     * @brief an abstract class of autonomous oscillator
+     */
+    class Oscillator{
     protected:
         float frequency;
         float phase;

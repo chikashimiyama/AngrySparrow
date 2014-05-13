@@ -8,6 +8,7 @@
 #ifndef WaveTable_h
 #define WaveTable_h
 
+
 class WaveTable : public Oscillator{
 public:
     
