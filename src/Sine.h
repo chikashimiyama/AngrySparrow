@@ -1,9 +1,7 @@
-//
-//  Sine.h
-//
-//  Created by Chikashi Miyama on 12/05/14.
-//
-//
+/**
+ * @ingroup AngrySparrow
+ * @authors Chikashi Miyama
+ */
 
 #ifndef Sine_h
 #define Sine_h
@@ -14,7 +12,7 @@
 namespace AngrySparrow {
     
     /**
-     * @brief standard Sinee wave oscillator. it uses Sine() function. Thus, computationally heavy
+     * @brief standard Sine wave oscillator. it uses Sine() function. Thus, computationally heavy
      */
     class Sine : public Oscillator{
     public:

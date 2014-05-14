@@ -1,9 +1,7 @@
-//
-//  Unit.h
-//
-//  Created by Chikashi Miyama on 12/05/14.
-//
-//
+/**
+ * @ingroup AngrySparrow
+ * @authors Chikashi Miyama
+ */
 
 #ifndef UnitGenerator_h
 #define UnitGenerator_h

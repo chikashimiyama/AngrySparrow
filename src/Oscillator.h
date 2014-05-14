@@ -19,7 +19,6 @@ namespace AngrySparrow {
     protected:
         std::vector<float> *frequencyVectorPtr; ///< a reference to a vector of frequencies
         float phase; ///< internal varibale which storing current phase
-        
         void advancePhase(float frequency); ///< advance the phase and get the value of phase
 
     public:

@@ -1,9 +1,7 @@
-//
-//  Phasor.h
-//
-//  Created by Chikashi Miyama on 12/05/14.
-//
-//
+/**
+ * @ingroup AngrySparrow
+ * @authors Chikashi Miyama
+ */
 
 #ifndef Phasor_h
 #define Phasor_h
@@ -13,31 +11,23 @@
 
 namespace AngrySparrow {
     
+    /**
+     * @brief standard Phasor that outputs signal from 0 to 1.
+     */
     class Phasor : public Oscillator{
-        virtual void performDSP();
     public:
-        virtual vector<float> getNextVector();
-    };
-    
-    inline void Phasor::performDSP(){
+        Phasor(std::vector<float> *targetVectorPtr, std::vector<float> *frequencyVectorPtr, float initialPhase = 0.0): 
+            Oscillator(targetVectorPtr, frequencyVectorPtr, initialPhase){};
         
-        if(!frequencyVectorPtr){
-            cout << "Phasor: frequencyVectorPtr not set" << endl;
-            return;
-        }
-        for (int i = 0; i < vectorSize; i++) {
-            outputVector[i] = phase / CYCLE;
-            frequency = (*frequencyVectorPtr)[i];
-            updatePhaseIncrement();
-            getNext();
-        }
-    }
-    
-    inline vector<float> Phasor::getNextVector(){
-        performDSP();
-        return outputVector;
+        virtual void performDSP();
     };
-    
+
+    inline void Phasor::performDSP(){
+        for (int i = 0; i < vectorSize; i++) {
+            (*targetVectorPtr)[i] =  phase / CYCLE;
+            advancePhase((*frequencyVectorPtr)[i]);
+        }
+    } 
 }
 
 
