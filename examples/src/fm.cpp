@@ -2,8 +2,14 @@
 #include <iostream>
 #include <cstdlib>
 #include "Sine.h"
+#include "Filter.h"
 
 AngrySparrow::Sine carrier, mod;
+std::vector<float> mOut;
+std::vector<float> aVec;
+AngrySparrow::Adder adder(&mOut, &aVec);
+std::vector<float> mfreq;
+
 
 int generator( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames,
          double streamTime, RtAudioStreamStatus status, void *userData )
@@ -13,14 +19,9 @@ int generator( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames
   if ( status )
     std::cout << "Stream underflow detected!" << std::endl;
 
-  std::vector<float> fv = mod.getNextVector();
+  std::vector<float> mOut = mod.getNextVector();
   
-  // to be editted by modifier
-  std::vector<float>::iterator it = fv.begin();
-  while(it != fv.end()){
-    *it = *it * 220 + 840;
-    it++;
-  }
+  adder()
 
   carrier.setFrequencyVectorPtr(&fv);
   std::vector<float> fmv = carrier.getNextVector();
@@ -40,13 +41,16 @@ int main()
     exit( 0 );
   }
 
-  mod.setAudioRateMode(false);
   RtAudio::StreamParameters parameters;
   parameters.deviceId = dac.getDefaultOutputDevice();
   parameters.nChannels = 2;
   parameters.firstChannel = 0;
   unsigned int sampleRate = 44100;
   unsigned int bufferFrames = 256; // 256 sample frames
+
+  mfreq.assign(440, bufferFrames);
+  mod.setFrequencyVectorPtr(&mfreq);
+
   try {
     dac.openStream( &parameters, NULL, RTAUDIO_FLOAT32,
                     sampleRate, &bufferFrames, &generator, NULL );

@@ -3,7 +3,9 @@
 	[
 		{
 			"follow_symlinks": true,
-			"path": "/Users/chikashi/Development/oFProjects/AngrySparrow"
+			"path": "/Users/chikashi/Development/oFProjects/AngrySparrow",
+			"folder_exclude_patterns": ["doc"],
+			"file_exclude_patterns": ["*.out"]
 		}
 	],
 	"build_systems":

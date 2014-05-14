@@ -8,6 +8,7 @@ Characteristics
 - GPL v3
 - Light weight
 - Float 32 bit based
+- Full sample/vector based
 - Open Source
 - Header Only, all inline 
 - No dependencies

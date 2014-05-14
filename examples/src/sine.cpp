@@ -3,7 +3,8 @@
 #include <cstdlib>
 #include "Sine.h"
 
-AngrySparrow::Sine sine;
+std::vector<float> targetVec,freqVec;
+AngrySparrow::Sine sine(&targetVec, &freqVec);
 
 int generator( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames,
          double streamTime, RtAudioStreamStatus status, void *userData )
@@ -13,11 +14,11 @@ int generator( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames
   if ( status )
     std::cout << "Stream underflow detected!" << std::endl;
 
-  std::vector<float> fv = sine.getNextVector();
-
-  for ( i=0; i<nBufferFrames; i++ ) {
-      *buffer++ = fv[i];
-      *buffer++ = fv[i];
+  sine.performDSP(); // create sine wave
+  int x = 0;
+  for (int i = 0; i < nBufferFrames; ++i){
+    buffer[x++] = targetVec[i];
+    buffer[x++] = targetVec[i];
   }
   return 0;
 }
@@ -30,13 +31,16 @@ int main()
     exit( 0 );
   }
 
-  sine.setAudioRateMode(false);
   RtAudio::StreamParameters parameters;
   parameters.deviceId = dac.getDefaultOutputDevice();
   parameters.nChannels = 2;
   parameters.firstChannel = 0;
   unsigned int sampleRate = 44100;
-  unsigned int bufferFrames = 256; // 256 sample frames
+  unsigned int bufferFrames = AngrySparrow::vectorSize; // 256 sample frames
+
+  targetVec.assign(AngrySparrow::vectorSize, 0.0);
+  freqVec.assign(AngrySparrow::vectorSize, 440);
+
   try {
     dac.openStream( &parameters, NULL, RTAUDIO_FLOAT32,
                     sampleRate, &bufferFrames, &generator, NULL );

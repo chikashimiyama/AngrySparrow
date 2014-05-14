@@ -14,20 +14,12 @@
 namespace AngrySparrow {
     
     class Phasor : public Oscillator{
-        virtual void performDSP_CR();
-        virtual void performDSP_AR();
+        virtual void performDSP();
     public:
         virtual vector<float> getNextVector();
     };
     
-    inline void Phasor::performDSP_CR(){
-        for (int i = 0; i < vectorSize; i++) {
-            outputVector[i] = phase / CYCLE;
-            getNext();
-        }
-    }
-    
-    inline void Phasor::performDSP_AR(){
+    inline void Phasor::performDSP(){
         
         if(!frequencyVectorPtr){
             cout << "Phasor: frequencyVectorPtr not set" << endl;
@@ -42,11 +34,7 @@ namespace AngrySparrow {
     }
     
     inline vector<float> Phasor::getNextVector(){
-        if(audioRateMode){
-            performDSP_AR();
-        }else{
-            performDSP_CR();
-        }
+        performDSP();
         return outputVector;
     };
     

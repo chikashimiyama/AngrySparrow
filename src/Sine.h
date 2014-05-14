@@ -17,42 +17,19 @@ namespace AngrySparrow {
      * @brief standard Sinee wave oscillator. it uses Sine() function. Thus, computationally heavy
      */
     class Sine : public Oscillator{
-        virtual void performDSP_CR();
-        virtual void performDSP_AR();
     public:
-        virtual std::vector<float> getNextVector();
-    };
-    
-    inline void Sine::performDSP_CR(){
-        for (int i = 0; i < vectorSize; i++) {
-            outputVector[i] = sin(phase);
-            getNext();
-        }
-    }
-    
-    inline void Sine::performDSP_AR(){
+        Sine(std::vector<float> *targetVectorPtr, std::vector<float> *frequencyVectorPtr, float initialPhase = 0.0): 
+            Oscillator(targetVectorPtr, frequencyVectorPtr, initialPhase){};
         
-        if(!frequencyVectorPtr){
-            std::cout << "Sine: frequencyVectorPtr not set" << std::endl;
-            return;
-        }
-        for (int i = 0; i < vectorSize; i++) {
-            outputVector[i] = sin(phase);
-            frequency = (*frequencyVectorPtr)[i];
-            updatePhaseIncrement();
-            getNext();
-        }
-    }
-    
-    inline std::vector<float> Sine::getNextVector(){
-        if(audioRateMode){
-            performDSP_AR();
-        }else{
-            performDSP_CR();
-        }
-        return outputVector;
+        virtual void performDSP();
     };
-    
+
+    inline void Sine::performDSP(){
+        for (int i = 0; i < vectorSize; i++) {
+            (*targetVectorPtr)[i] = sin(phase);
+            advancePhase((*frequencyVectorPtr)[i]);
+        }
+    } 
 }
 
 
