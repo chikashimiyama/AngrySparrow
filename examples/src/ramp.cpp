@@ -5,8 +5,9 @@
 #include "example.h"
 
 using namespace AngrySparrow;
-std::vector<float> targetVec,freqVec;
+std::vector<float> targetVec, freqVec;
 Sine sine(&targetVec, &freqVec);
+Ramp ramp(&freqVec, 880, 440, 44100 );
 
 int generator( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames,
          double streamTime, RtAudioStreamStatus status, void *userData )
@@ -16,6 +17,7 @@ int generator( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames
   if ( status )
     std::cout << "Stream underflow detected!" << std::endl;
 
+  ramp.performDSP();
   sine.performDSP(); // create sine wave
   int x = 0;
   for (int i = 0; i < nBufferFrames; ++i){

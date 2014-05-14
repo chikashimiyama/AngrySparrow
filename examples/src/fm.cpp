@@ -26,8 +26,8 @@ int generator( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames
   carrier.performDSP();
 
   for ( i=0; i<nBufferFrames; i++ ) {
-      *buffer++ = targetVec[i];
-      *buffer++ = targetVec[i];
+      *buffer++ = targetVec[i] * 0.1;
+      *buffer++ = targetVec[i] * 0.1;
   }
   return 0;
 }

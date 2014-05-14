@@ -17,4 +17,6 @@
 #include "Phasor.h"
 
 #include "Noise.h"
+
+#include "Ramp.h"
 #endif
