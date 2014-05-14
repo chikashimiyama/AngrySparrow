@@ -20,11 +20,12 @@ namespace AngrySparrow {
         float incrementer; ///< internal variable for increment
         float destination; ///< destination value
         unsigned long duration; ///< number of samples to reach the goal
-        unsigned long counter;
+        unsigned long counter; ///< current progress
         float progress; ///< prgress towards the goal
-        bool arrived;
+        bool arrived; ///< destination arrived or not
 
     public:
+        /// constructor
         Ramp(std::vector<float> *targetVectorPtr, float destination = 0.0, float current = 0.0, float duration = 0.0):UnitGenerator(targetVectorPtr){
             setDuration(duration);
             setDestination(destination);
@@ -33,25 +34,25 @@ namespace AngrySparrow {
             arrived = false;
         }; 
 
-        void setDuration(unsigned long duration);
-        unsigned long getDuration(void);
+        void setDuration(float duration); ///< set duration
+        float getDuration(void); ///< get duration
 
-        void setDestination(float destination);
-        float getDestination();
+        void setDestination(float destination); ///< set destination
+        float getDestination(); ///< get destination
 
-        void setCurrent(float current);
-        float getCurrent();
+        void setCurrent(float current); ///< set current
+        float getCurrent(); ///< get current
 
         virtual void performDSP();
     };
 
-    inline void Ramp::setDuration(unsigned long duration){
-        Ramp::duration = duration;
+    inline void Ramp::setDuration(float duration){
+        Ramp::duration = secondToSample(duration);
         arrived = false;
     }
 
-    inline unsigned long Ramp::getDuration(){
-        return duration;
+    inline float Ramp::getDuration(){
+        return sampleToSecond(duration);
     }
 
     inline void Ramp::setCurrent(float current){

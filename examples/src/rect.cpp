@@ -5,9 +5,9 @@
 #include "example.h"
 
 using namespace AngrySparrow;
-std::vector<float> targetVec, freqVec;
-Sine sine(&targetVec, &freqVec);
-Ramp ramp(&freqVec, 880, 440, 2.0 );
+std::vector<float> targetVec,freqVec, dutyVec;
+Ramp ramp(&dutyVec, 0.9, 0.01, 5.0);
+Rect rect(&targetVec, &freqVec, &dutyVec);
 
 int generator( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames,
          double streamTime, RtAudioStreamStatus status, void *userData )
@@ -18,7 +18,7 @@ int generator( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames
     std::cout << "Stream underflow detected!" << std::endl;
 
   ramp.performDSP();
-  sine.performDSP(); // create sine wave
+  rect.performDSP(); // create sine wave
   int x = 0;
   for (int i = 0; i < nBufferFrames; ++i){
     buffer[x++] = targetVec[i] * 0.1;
@@ -29,7 +29,9 @@ int generator( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames
 
 int main(){
   targetVec.assign(vectorSize, 0.0);
-  freqVec.assign(vectorSize, 440);
+  freqVec.assign(vectorSize, 110);
+  dutyVec.assign(vectorSize, 0.01);
+
   setup(&generator);
   return 0;
 }

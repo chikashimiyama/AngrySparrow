@@ -13,7 +13,7 @@
 namespace AngrySparrow {
 
     /**
-     * @brief adding operand to the signal operand vector
+     * @brief multiplying operand to the signal operand vector
      */
     class Multiplier : public UnitGenerator{
 

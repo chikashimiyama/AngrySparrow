@@ -13,6 +13,10 @@
 		{
 			"name" : "Angry",
 			"cmd" : ["make","-C", "${project_path}/../examples/src"]
+		},
+		{
+			"name" : "Angry Clean",
+			"cmd" : ["make", "clean", "-C", "${project_path}/../examples/src"]
 		}
 	]
 }
