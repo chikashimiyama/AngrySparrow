@@ -7,6 +7,8 @@
 #define AngrySparrow_h
 
 	#include "Const.h"
+ 	#include "DSP.h"
+
 	#include "UnitGenerator.h"
 
 	#include "Adder.h"

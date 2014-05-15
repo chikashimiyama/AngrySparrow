@@ -19,10 +19,9 @@ int generator( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames
 
   ramp.performDSP();
   rect.performDSP(); // create sine wave
-  int x = 0;
   for (int i = 0; i < nBufferFrames; ++i){
-    buffer[x++] = targetVec[i] * 0.1;
-    buffer[x++] = targetVec[i] * 0.1;
+    *buffer++ = targetVec[i] * 0.1;
+    *buffer++ = targetVec[i] * 0.1;
   }
   return 0;
 }

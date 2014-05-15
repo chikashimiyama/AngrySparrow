@@ -1,22 +1,39 @@
 {
-	"folders":
-	[
-		{
-			"follow_symlinks": true,
-			"path": "/Users/chikashi/Development/oFProjects/AngrySparrow",
-			"folder_exclude_patterns": ["doc"],
-			"file_exclude_patterns": ["*.out"]
-		}
-	],
 	"build_systems":
 	[
 		{
-			"name" : "Angry",
-			"cmd" : ["make","-C", "${project_path}/../examples/src"]
+			"cmd":
+			[
+				"make",
+				"-C",
+				"${project_path}/../examples/src"
+			],
+			"name": "Angry"
 		},
 		{
-			"name" : "Angry Clean",
-			"cmd" : ["make", "clean", "-C", "${project_path}/../examples/src"]
+			"cmd":
+			[
+				"make",
+				"clean",
+				"-C",
+				"${project_path}/../examples/src"
+			],
+			"name": "Angry Clean"
+		}
+	],
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"*.out"
+			],
+			"folder_exclude_patterns":
+			[
+				"doc"
+			],
+			"follow_symlinks": true,
+			"path": "/Users/chikashi/Development/oFProjects/AngrySparrow"
 		}
 	]
 }
