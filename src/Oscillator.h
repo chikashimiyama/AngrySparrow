@@ -22,11 +22,8 @@ namespace AngrySparrow {
         void advancePhase(float frequency); ///< advance the phase and get the value of phase
 
     public:
-        Oscillator(std::vector<float> *targetVectorPtr, std::vector<float> *frequencyVectorPtr, float initialPhase = 0.0):UnitGenerator(targetVectorPtr){
-            Oscillator::frequencyVectorPtr = frequencyVectorPtr;
-            setPhase(initialPhase);
-        }; 
-        
+        /// constructor that invokes the constructor of the superclass
+        Oscillator(std::vector<float> *tvp, std::vector<float> *fvp, float ip = 0.0) : UnitGenerator(tvp), frequencyVectorPtr(fvp), phase(ip){};
         void setPhase(float phase); ///< force set the phase
         void resetPhase(); ///< set the phase to 0
         float getPhase(); ///< get current phase

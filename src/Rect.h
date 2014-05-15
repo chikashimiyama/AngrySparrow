@@ -18,10 +18,7 @@ namespace AngrySparrow {
     protected:
         std::vector<float> *dutyCycleVectorPtr;
     public:
-        Rect(std::vector<float> *targetVectorPtr, std::vector<float> *frequencyVectorPtr,  std::vector<float> *dutyCycleVectorPtr, float initialPhase = 0.0) : Oscillator(targetVectorPtr, frequencyVectorPtr, initialPhase){
-            Rect::dutyCycleVectorPtr = dutyCycleVectorPtr;
-        };
-        
+        Rect(std::vector<float> *tvp, std::vector<float> *fvp, std::vector<float> *dcvp, float ip = 0.0) : Oscillator(tvp, fvp, ip), dutyCycleVectorPtr(dcvp){};
         virtual void performDSP();
     };
 

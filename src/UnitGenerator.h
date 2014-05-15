@@ -18,14 +18,9 @@ namespace AngrySparrow {
         std::vector<float> *targetVectorPtr; ///< pointer to the vector, which the result of DSP will be stored. Should be bigger than the vector size.
         
     public:
-        UnitGenerator(std::vector<float> *targetVectorPtr); ///< constructor. The reference must be provided here.
+        UnitGenerator(std::vector<float> *tvp): targetVectorPtr(tvp){}; ///< constructor. The reference must be provided here.
         virtual void performDSP() = 0; ///< pure abstract function for DSP. should be implemented in all subclasses
     };
-
-    inline UnitGenerator::UnitGenerator(std::vector<float> *targetVectorPtr){
-        UnitGenerator::targetVectorPtr = targetVectorPtr;
-    }
 }
-
 
 #endif

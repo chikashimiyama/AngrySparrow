@@ -23,15 +23,14 @@ namespace AngrySparrow {
         unsigned long counter; ///< current progress
         float progress; ///< prgress towards the goal
         bool arrived; ///< destination arrived or not
+        void updateIncrementer(); ///< calc increment per sample
 
     public:
         /// constructor
-        Ramp(std::vector<float> *targetVectorPtr, float destination = 0.0, float current = 0.0, float duration = 0.0):UnitGenerator(targetVectorPtr){
-            setDuration(duration);
-            setDestination(destination);
-            setCurrent(current);
+        Ramp(std::vector<float> *tvp, float dst = 880.0, float ct = 440.0, float dur = 1.0):UnitGenerator(tvp), destination(dst), current(ct), duration(secondToSample(dur)){
             counter = 0;
             arrived = false;
+            updateIncrementer();
         }; 
 
         void setDuration(float duration); ///< set duration
@@ -45,6 +44,10 @@ namespace AngrySparrow {
 
         virtual void performDSP();
     };
+
+    inline void Ramp::updateIncrementer(){
+        incrementer = (destination - current) / duration;
+    }
 
     inline void Ramp::setDuration(float duration){
         Ramp::duration = secondToSample(duration);
@@ -65,7 +68,7 @@ namespace AngrySparrow {
 
     inline void Ramp::setDestination(float destination){
         Ramp::destination = destination;
-        incrementer = (destination - current) / duration;
+        updateIncrementer();
     }
 
     inline float Ramp::getDestination(){

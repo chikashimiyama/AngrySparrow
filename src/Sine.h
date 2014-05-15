@@ -16,10 +16,8 @@ namespace AngrySparrow {
      */
     class Sine : public Oscillator{
     public:
-
         /// constructor
-        Sine(std::vector<float> *targetVectorPtr, std::vector<float> *frequencyVectorPtr, float initialPhase = 0.0):Oscillator(targetVectorPtr, frequencyVectorPtr, initialPhase){};
-        
+        Sine(std::vector<float> *tvp, std::vector<float> *fvp, float ip = 0.0):Oscillator(tvp, fvp, ip){};
         virtual void performDSP();
     };
 

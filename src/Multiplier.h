@@ -19,9 +19,7 @@ namespace AngrySparrow {
 
     public:
         std::vector<float> *multiplierVectorPtr; ///< a reference to a vector of multipliers
-        Multiplier(std::vector<float> *targetVectorPtr, std::vector<float> *multiplierVectorPtr):UnitGenerator(targetVectorPtr){
-            Multiplier::multiplierVectorPtr = multiplierVectorPtr;
-        }; 
+        Multiplier(std::vector<float> *tvp, std::vector<float> *mvp):UnitGenerator(tvp), multiplierVectorPtr(mvp){};
         virtual void performDSP();
     };
 
