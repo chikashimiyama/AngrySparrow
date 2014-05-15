@@ -19,6 +19,7 @@ namespace AngrySparrow {
 
     public:
         std::vector<float> *adderVectorPtr; ///< a reference to a vector of adders
+
         Adder(std::vector<float> *tvp, std::vector<float> *avp):UnitGenerator(tvp), adderVectorPtr(avp){};
         virtual void performDSP();
     };
