@@ -11,7 +11,8 @@
 namespace AngrySparrow {
     
     /**
-     * @brief abstract class for DSP
+     * @brief abstract class of all sound processor/generators
+     * @details This class takes a pointer to a vector which will be filled with outgoing signal of subclasses. However, this class do not have a functionality to allocate memory to the vector. Thus, it is the responsibility of users to allocate appropriate memory before the passing a pointer to this class, or more precisely the instantiation of this class.
      */
     class UnitGenerator{
     protected:
