@@ -5,16 +5,14 @@
 #include "example.h"
 
 using namespace AngrySparrow;
-std::vector<float> targetVec, freqVec, modVec, adderVec, multiVec;
-Sine mod(&modVec, &freqVec);
-Sine carrier(&targetVec, &modVec);
-Multiplier multiplier(&modVec, &adderVec);
-Adder adder(&modVec, &multiVec);
+std::vector<float> targetVec, coefVec;
+OnePole onepole(&targetVec, &coefVec);
+Noise noise(&targetVec);
+Ramp ramp(&coefVec, 1.0, 0.0, 5.0);
 DSP dsp;
 
 int generator( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames,
-         double streamTime, RtAudioStreamStatus status, void *userData )
-{
+         double streamTime, RtAudioStreamStatus status, void *userData ){
   float *buffer = (float *) outputBuffer;
   if ( status )
     std::cout << "Stream underflow detected!" << std::endl;
@@ -29,18 +27,14 @@ int generator( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames
 }
 
 int main(){
-  targetVec = allocVector(0);
-  freqVec = allocVector(440);
-  modVec = allocVector(0);
-  multiVec = allocVector(330);
-  adderVec = allocVector(840);
+  coefVec.assign(vectorSize, 0);
+  targetVec.assign(vectorSize, 0);
 
   // order of execution
-  dsp.addToChain(&mod);
-  dsp.addToChain(&multiplier);
-  dsp.addToChain(&adder);
-  dsp.addToChain(&carrier);
-
+  dsp.addToChain(&ramp);
+  dsp.addToChain(&noise);
+  dsp.addToChain(&onepole);
+  
   setup(&generator);
   return 0;
 }

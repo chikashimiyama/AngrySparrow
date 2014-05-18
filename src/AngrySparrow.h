@@ -20,6 +20,7 @@
 	#include "Rect.h"
 
 	#include "Noise.h"
+ 	#include "Onepole.h"
 
 	#include "Ramp.h"
 #endif

@@ -24,6 +24,12 @@ namespace AngrySparrow {
 		return static_cast<unsigned long>(second * static_cast<float>(sampleRate));
 	}
 
+	inline std::vector<float> allocVector(float fill){
+		std::vector<float> vec;
+		vec.assign(vectorSize, fill);
+		return vec;
+	}
+
 }
 
 #endif
