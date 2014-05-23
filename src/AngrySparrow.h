@@ -18,9 +18,12 @@
 	#include "Sine.h"
 	#include "Phasor.h"
 	#include "Rect.h"
+	#include "Wavetable.h"
 
 	#include "Noise.h"
  	#include "Onepole.h"
 
 	#include "Ramp.h"
+
+ 	#include "Interpolation.h"
 #endif
