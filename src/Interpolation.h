@@ -82,6 +82,13 @@
 		return value;
 	}
 
+	inline void Interpolation::prepareLinear(std::vector<float> *table){
+		float first = (*table)[0];
+		table->push_back(first);
+	}
 	
+	inline void Interpolation::prepareCubic(std::vector<float> *table){
+		//to be implemented
+	}
 }
 #endif

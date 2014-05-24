@@ -35,8 +35,8 @@ int main(){
     tableVec[i] += sin(static_cast<float>(i)/static_cast<float>(tableSize) * CYCLE * 5) * 0.25;
     tableVec[i] *= 0.5;
   }
-  tableVec[tableSize] = tableVec[0];
 
+  Interpolation::prepareLinear(&tableVec);
   targetVec.assign(vectorSize, 0.0);
   freqVec.assign(vectorSize, 440);
   dsp.addToChain(&wavetable);
