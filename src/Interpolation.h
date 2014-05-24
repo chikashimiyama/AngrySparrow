@@ -68,6 +68,7 @@
 			    value = ((*tablePointer)[index+1] - (*tablePointer)[index]) * weight + (*tablePointer)[index]; //
 			    break;
 			}case CUBIC:{
+				// to be implemented
 
 
 				break;
@@ -86,9 +87,14 @@
 		float first = (*table)[0];
 		table->push_back(first);
 	}
-	
+
 	inline void Interpolation::prepareCubic(std::vector<float> *table){
 		//to be implemented
+		float first = (*table)[0];
+		float second = (*table)[1];
+		table->push_back(first);
+		table->push_back(second);
 	}
 }
+
 #endif

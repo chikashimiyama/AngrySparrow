@@ -8,7 +8,7 @@ using namespace AngrySparrow;
 
 const int tableSize = 512; // 512 + 1
 std::vector<float> targetVec(vectorSize), freqVec(vectorSize), tableVec(tableSize+1);
-WaveTable wavetable(&targetVec, &freqVec, &tableVec);
+WaveTable wavetable(&targetVec, &freqVec, &tableVec, Interpolation::CUBIC);
 DSP dsp;
 
 int generator( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames,
@@ -37,6 +37,8 @@ int main(){
   }
 
   Interpolation::prepareLinear(&tableVec);
+  Interpolation::prepareCubic(&tableVec);
+
   targetVec.assign(vectorSize, 0.0);
   freqVec.assign(vectorSize, 440);
   dsp.addToChain(&wavetable);
