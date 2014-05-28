@@ -6,9 +6,9 @@
 
 using namespace AngrySparrow;
 std::vector<float> targetVec, coefVec;
-OnePole onepole(&targetVec, &coefVec);
+LowPass lowpass(&targetVec, &coefVec);
 Noise noise(&targetVec);
-Ramp ramp(&coefVec, 1.0, 0.0, 5.0);
+Ramp ramp(&coefVec, 440.0, 880.0, 5.0);
 DSP dsp;
 
 int generator( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames,
@@ -33,7 +33,7 @@ int main(){
   // order of execution
   dsp.addToChain(&ramp);
   dsp.addToChain(&noise);
-  dsp.addToChain(&onepole);
+  dsp.addToChain(&lowpass);
   
   setup(&generator);
   return 0;

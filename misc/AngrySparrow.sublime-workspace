@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"I",
+				"Interpolation"
+			],
+			[
+				"table",
+				"tableSize"
+			],
+			[
+				"tab",
+				"tableSize"
+			],
+			[
+				"v",
+				"vectorSize"
+			],
+			[
+				"INTE",
+				"INTERPOLATION_MODE_NONE"
+			],
+			[
+				"de",
+				"details	@details"
+			],
+			[
+				"interpolate",
+				"interpolateLinear"
+			],
+			[
+				"wa",
+				"wavetable"
+			],
+			[
+				"ve",
+				"vector	std::vector"
+			],
+			[
+				"coefv",
+				"coefv"
+			],
+			[
 				"adder",
 				"adderVectorPtr"
 			],
@@ -14,10 +54,6 @@
 			[
 				"freq",
 				"frequencyVectorPtr"
-			],
-			[
-				"ve",
-				"vectorSize"
 			],
 			[
 				"uni",
@@ -300,10 +336,6 @@
 				"getAddressAsString"
 			],
 			[
-				"de",
-				"delimiters"
-			],
-			[
 				"returned",
 				"returnedMessage"
 			],
@@ -380,34 +412,10 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/.gitignore",
+			"file": "/Users/chikashi/Development/spatdiflib/src/C/sdcDate.c",
 			"settings":
 			{
-				"buffer_size": 12,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/UnitGenerator.h",
-			"settings":
-			{
-				"buffer_size": 689,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/Oscillator.h",
-			"settings":
-			{
-				"buffer_size": 1533,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/Multiplier.h",
-			"settings":
-			{
-				"buffer_size": 762,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -416,30 +424,6 @@
 			"settings":
 			{
 				"buffer_size": 486,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/Sine.h",
-			"settings":
-			{
-				"buffer_size": 715,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/Rect.h",
-			"settings":
-			{
-				"buffer_size": 832,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/Ramp.h",
-			"settings":
-			{
-				"buffer_size": 2555,
 				"line_ending": "Unix"
 			}
 		}
@@ -463,7 +447,27 @@
 				"Git: Add..."
 			],
 			[
+				"c++",
+				"Set Syntax: C++"
+			],
+			[
 				"git c",
+				"Git: Commit"
+			],
+			[
+				"git",
+				"Git: Commit"
+			],
+			[
+				"git add ",
+				"Git: Add Current File"
+			],
+			[
+				"previe",
+				"OmniMarkupPreviewer: Preview Current Markup in Browser"
+			],
+			[
+				"git ",
 				"Git: Commit"
 			],
 			[
@@ -471,16 +475,8 @@
 				"Git: Status"
 			],
 			[
-				"git add ",
-				"Git: Add..."
-			],
-			[
 				"build",
 				"Build: Build"
-			],
-			[
-				"git ",
-				"Git: Commit"
 			],
 			[
 				"",
@@ -496,10 +492,6 @@
 			],
 			[
 				"prev",
-				"OmniMarkupPreviewer: Preview Current Markup in Browser"
-			],
-			[
-				"previe",
 				"OmniMarkupPreviewer: Preview Current Markup in Browser"
 			],
 			[
@@ -535,20 +527,12 @@
 				"Set Syntax: Makefile"
 			],
 			[
-				"c++",
-				"Set Syntax: C++"
-			],
-			[
 				"snippet",
 				"Snippet: c++ vector iterator"
 			],
 			[
 				"syntax c++",
 				"Set Syntax: C++"
-			],
-			[
-				"git",
-				"Git: Commit"
 			],
 			[
 				"git sta",
@@ -636,31 +620,44 @@
 	},
 	"file_history":
 	[
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Adder.h",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Ramp.h",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Phasor.h",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Sine.h",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/DSP.h",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/fm.cpp",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/sine.cpp",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/rect.cpp",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/Makefile",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/ramp.cpp",
+		"/Users/chikashi/Development/spatdiflib/src/sdDate.h",
+		"/Users/chikashi/Development/spatdiflib/src/C/sdcDate.h",
+		"/Users/chikashi/Development/spatdiflib/src/C/Makefile",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/AngrySparrow.h",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/misc/AngrySparrow.sublime-project",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Multiplier.h",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/README.md",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/UnitGenerator.h",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Rect.h",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/example.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/Makefile",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/wavetable.cpp",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Butterworth.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Oscillator.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/EnvPlay.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/EnvGen.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Interpolation.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Const.h",
-		"/Users/chikashi/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Phasor.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/WaveTable.h",
+		"/Users/chikashi/Works/Event/2014/Interface-Entwicklung_ZHDK_2014/Klasse6/Klasse6.md",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/ExpRamp.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Ramp.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/OnePole.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Sine.h",
+		"/Users/chikashi/Works/Event/2014/Interface-Entwicklung_ZHDK_2014/Klasse7/Klasse7.md",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/onepole.cpp",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/fm.cpp",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Rect.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/ramp.cpp",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Noise.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/UnitGenerator.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/rect.cpp",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/sine.cpp",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Multiplier.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/misc/AngrySparrow.sublime-project",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/.gitignore",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Adder.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/DSP.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/README.md",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/example.h",
+		"/Users/chikashi/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/ramp.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/ramp.h",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Noise.h",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/.gitignore",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/misc/Doxyfile",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/include/RtAudio.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/AngrySparrow.sublime-project",
@@ -705,8 +702,6 @@
 		"/Users/chikashi/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
 		"/Users/chikashi/Library/Application Support/Sublime Text 3/Packages/User/SublimeGDB.sublime-settings",
 		"/Users/chikashi/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/Users/chikashi/Works/Event/2014/Interface-Entwicklung_ZHDK_2014/Klasse6/Klasse6.md",
-		"/Users/chikashi/Works/Event/2014/Interface-Entwicklung_ZHDK_2014/Klasse7/Klasse7.md",
 		"/Users/chikashi/Works/Event/2014/Interface-Entwicklung_ZHDK_2014/Klasse1/Klasse1.md",
 		"/Users/chikashi/Development/of_v0.8.1_osx_release/apps/myApps/gammaTest/src/main.cpp",
 		"/Users/chikashi/Development/of_v0.8.1_osx_release/apps/myApps/gammaTest/src/testApp.h",
@@ -752,18 +747,7 @@
 		"/Users/chikashi/Development/spatdiflib/examples/sdLoaderTest.cpp",
 		"/Users/chikashi/Development/spatdiflib/examples/sdSaverTest.cpp",
 		"/Users/chikashi/Development/spatdiflib/src/bin/libspatdif/Index/Debug/macosx10.9-x86_64/libspatdif.xcindex/db.xcindexdb.strings-res",
-		"/Users/chikashi/Development/spatdiflib/examples/turenas_generated.xml",
-		"/Users/chikashi/Development/spatdiflib/src/sdEntityCore.h",
-		"/Users/chikashi/Development/spatdiflib/examples/sdOSCMessageTest.out",
-		"/Users/chikashi/Development/spatdiflib/src/sdEntity.cpp",
-		"/Users/chikashi/Development/spatdiflib/examples/sdSceneTest.cpp",
-		"/Users/chikashi/Development/spatdiflib/src/bugfixtest.cpp",
-		"/Users/chikashi/Development/spatdiflib/examples/Makefile",
-		"/Users/chikashi/Development/spatdiflib/examples/sdExtensionTest.cpp",
-		"/Users/chikashi/Development/spatdiflib/src/SpatDIFLib.xcworkspace/xcuserdata/chikashi.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist",
-		"/Users/chikashi/Development/spatdiflib/src/bin/libspatdif/Index/Debug/macosx10.9-x86_64/libspatdif.xcindex/db.xcindexdb-wal",
-		"/Users/chikashi/Development/spatdiflib/src/bin/libspatdif/Logs/Build/DC04243B-F4B0-4717-B664-CCE792441EFB.xcactivitylog",
-		"/Users/chikashi/Development/spatdiflib/src/sdDate.h"
+		"/Users/chikashi/Development/spatdiflib/examples/turenas_generated.xml"
 	],
 	"find":
 	{
@@ -781,6 +765,22 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"sdCWrapper",
+			"____sdCWrapper_",
+			"EnvPlay_h",
+			"Const",
+			"vector",
+			"Interpollation",
+			"prepareCubic",
+			"INTERPOLATION_MODE_",
+			"INTER",
+			"weight",
+			"Ramp",
+			"Ram",
+			"Ramp",
+			"  \n",
+			"Butterworth",
+			"Oscillator",
 			" ,",
 			"buffer[x++]",
 			"buffer[x++] ",
@@ -892,23 +892,7 @@
 			"getNextEventSet",
 			"activated",
 			"getNextEvent",
-			"getEntityName",
-			"getNextEvent",
-			"re",
-			"returnMessage",
-			"sdOSCMessage",
-			"rit",
-			"returnMessageVector.push_back(returnMessage);",
-			"getArgmentAsString",
-			"getMessageAsString",
-			"getOrdering",
-			"setAddress",
-			"sdOSCMessage",
-			"getHost",
-			"argCout",
-			"argC",
-			"cout",
-			"cout<<"
+			"getEntityName"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -926,119 +910,29 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/.gitignore",
+					"file": "/Users/chikashi/Development/spatdiflib/src/C/sdcDate.c",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12,
-								12
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/UnitGenerator.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 689,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								680,
-								680
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/Oscillator.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1533,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								817,
-								817
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/Multiplier.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 762,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								542,
-								542
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/C++/C++.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1048,9 +942,9 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 1,
 					"file": "AngrySparrow.sublime-project",
-					"semi_transient": true,
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 486,
@@ -1060,8 +954,8 @@
 						"selection":
 						[
 							[
-								281,
-								281
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1074,96 +968,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/Sine.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 715,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								329,
-								329
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/Rect.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 832,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								486,
-								486
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/Ramp.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2555,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1000,
-								1000
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 980.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1223,6 +1027,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"noi",
+				"src/Noise.h"
+			],
 			[
 				"seta",
 				"src/Generator.h"

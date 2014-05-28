@@ -21,7 +21,7 @@
 	#include "Wavetable.h"
 
 	#include "Noise.h"
- 	#include "Onepole.h"
+ 	#include "LowPass.h"
 
 	#include "Ramp.h"
 
