@@ -6,7 +6,7 @@ STATIC_LIB = ../lib/librtaudio.a
 INCLUDE_PATH = -I ../include -I ../../src
 OBJECTS = RtAudio.o
 
-all: sine.out fm.out rect.out ramp.out lowpass.out wavetable.out
+all: sine.out fm.out rect.out ramp.out lowpass.out highpass.out wavetable.out
 
 sine.out: sine.cpp $(OBJECTS)
 	$(CC) -o $@ $(CFLAGS) $(LIBS) $(INCLUDE_PATH) sine.cpp $(OBJECTS) 
@@ -22,6 +22,9 @@ ramp.out: ramp.cpp $(OBJECTS)
 
 lowpass.out: lowpass.cpp $(OBJECTS)
 	$(CC) -o $@ $(CFLAGS) $(LIBS) $(INCLUDE_PATH) lowpass.cpp $(OBJECTS) 
+
+highpass.out: highpass.cpp $(OBJECTS)
+	$(CC) -o $@ $(CFLAGS) $(LIBS) $(INCLUDE_PATH) highpass.cpp $(OBJECTS) 
 
 wavetable.out: wavetable.cpp $(OBJECTS)
 	$(CC) -o $@ $(CFLAGS) $(LIBS) $(INCLUDE_PATH) wavetable.cpp $(OBJECTS) 

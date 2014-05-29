@@ -13,6 +13,9 @@ namespace AngrySparrow {
     const float HALF_RAND_MAX (RAND_MAX /2 );
     const int sampleRate = 44100;
     const int vectorSize = 256;
+    const int fTableSize = 16384;
+
+
     float sampleToSecond(unsigned long sample); ///< convert sample to second
     unsigned long secondToSample(); ///< convert second to sample
 

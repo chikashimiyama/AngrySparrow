@@ -22,6 +22,7 @@
 
 	#include "Noise.h"
  	#include "LowPass.h"
+ 	#include "HighPass.h"
 
 	#include "Ramp.h"
 

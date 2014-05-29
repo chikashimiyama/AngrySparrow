@@ -3,8 +3,8 @@
  * @authors Chikashi Miyama
  */
 
-#ifndef LowPass_h
-#define LowPass_h
+#ifndef HighPass_h
+#define HighPass_h
 
 #include <cmath>
 #include "Const.h"
@@ -15,14 +15,14 @@
     /**
      * @brief 1st oreder butterworth filter
      */
-     class LowPass: public UnitGenerator{
+     class HighPass: public UnitGenerator{
      protected:
         float z;
         std::vector<float> *cutoffVectorPtr; ///< a reference to a vector of frequencies
 
     public:
         /// constructor that invokes the constructor of the superclass
-        LowPass(std::vector<float> *tvp, std::vector<float> *cutoffv) : UnitGenerator(tvp), cutoffVectorPtr(cutoffv){
+        HighPass(std::vector<float> *tvp, std::vector<float> *cutoffv) : UnitGenerator(tvp), cutoffVectorPtr(cutoffv){
             z = 0.0;
         };
         
@@ -30,15 +30,15 @@
 
     };
 
-    inline void LowPass::performDSP(){
+    inline void HighPass::performDSP(){
         for(int i = 0; i < vectorSize; i++){
             
             float costh, coef;
             float input = (*targetVectorPtr)[i];
             float cutoff = (*cutoffVectorPtr)[i];
             costh = 2.0 - cos(CYCLE * cutoff/sampleRate);
-            coef = sqrt(costh*costh - 1.0) - costh;
-            z = input * (1+coef) - z*coef;
+            coef = costh - sqrt(costh*costh - 1.0);
+            z = (input * (1-coef) - z*coef);
             (*targetVectorPtr)[i] = z;
         }
     }

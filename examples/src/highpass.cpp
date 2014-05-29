@@ -6,7 +6,7 @@
 
 using namespace AngrySparrow;
 std::vector<float> targetVec, cutoffVec;
-LowPass lowpass(&targetVec, &cutoffVec);
+HighPass highpass(&targetVec, &cutoffVec);
 Noise noise(&targetVec);
 Ramp ramp(&cutoffVec, 100.0, 8000.0, 5.0);
 DSP dsp;
@@ -33,7 +33,7 @@ int main(){
   // order of execution
   dsp.addToChain(&ramp);
   dsp.addToChain(&noise);
-  dsp.addToChain(&lowpass);
+  dsp.addToChain(&highpass);
   
   setup(&generator);
   return 0;
