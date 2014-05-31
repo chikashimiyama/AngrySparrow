@@ -13,8 +13,7 @@ Adder adder(&modVec, &multiVec);
 DSP dsp;
 
 int generator( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames,
-         double streamTime, RtAudioStreamStatus status, void *userData )
-{
+         double streamTime, RtAudioStreamStatus status, void *userData ){
   float *buffer = (float *) outputBuffer;
   if ( status )
     std::cout << "Stream underflow detected!" << std::endl;
