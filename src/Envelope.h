@@ -15,45 +15,39 @@ namespace AngrySparrow {
 
 	protected:
 		std::vector<float> envelope;
-		bool noteOn;
 	public:
-		static std::vector<float> createADSR(float attack, float decay, float sustainLevel, float release);
 
 		Envelope();
-		Envelope(float attack, float decay, float sustainLevel, float release);
 		void performDSP();
 
 	};
 
-
-	inline static Envelope::createADSR(float attack, float decay, float sustainLevel, float release){
-
-		unsigned long attackInSamps = secondToSamps(attack);
-		unsigned long decayInSamps = secondToSamps(decay);
-		unsigned long releaseInSamps = secondToSamps(release);
-		unsigned long total = attackInSamps + decayInSamps + releaseInSamps;
-
-		std::vector<float> envelope(total);
-		unsigned long cnt = 0;
-		for (int i = 0; i < attackInSamps; i++){
-			envelope[cnt++] = static_cast<float>(i) / static_cast<float>(attackInSamps);
+	inline Envelope::Envelope(std::vector<float> values, std::std::vector<float> times){
+		int numValues = values.size();
+		int numTimes = times.size();
+		if(numTimes == numValues - 1){
+			std::cout << "Envelope: invalid number of arguments. Values:" << numValues << " Times:" << numTimes << std::endl; 
+			return;
 		}
-		float gap = 1.0 - sustainLevel;
-		for (int i = 0; i < decayInSamps; i++){
-			envelope[cnt++] = 1.0 - gap * (static_cast<float>(i) / static_cast<float>(attackInSamps));
+		unsigned long totalSamps = 0;
+		std::vector<float>::iterator it = times.begin();
+		std::vector<unsigned long> timesInSamps;
+		while(it != times.end()){
+			float tm = *it;
+			unsigned long numSamps = secondToSample(tm);
+			timeSamps.push_back(numSamps);
+			totalSamps += numSamps;
 		}
-		for (int i = 0; i < releaseInSamps; i++){
-			envelope[cnt++] =
+		envelope.reserve(totalSamps);
+		unsigned long envCount = 0;
+		for(int i = 0; i < numTimes; i++){
+			float dif = values[i+1] - values[i];
+			unsigned long numSamps = timesInSamps[i];
+			float step = dif / static_cast<float>(numSamps); // unsafe
+			for(int i = 0; i < numSamps; i++){
+				envelope[envCount++] = values[i] + step;
+			}
 		}
 	}
-
-	inline Envelope::Envelope(){
-
-	}
-
-	inline Envelope::Envelope(float attack, float decay, float sustainLevel, float release){
-		createADSR(attack, decay, sustainLevel, release);
-	}
-
 }
 #endif
