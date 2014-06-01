@@ -8,7 +8,7 @@ using namespace AngrySparrow;
 std::vector<float> targetVec(vectorSize), positionVec(vectorSize), freqVec(vectorSize), tableVec(sampleRate * 5);
 Sine sine(&targetVec, &freqVec);
 Play control(&freqVec, &positionVec, &tableVec);
-Ramp ramp(&positionVec, sampleRate * 5, 0, 5.0);
+Ramp ramp(&positionVec, sampleRate * 5, 0, 4.9);
 DSP dsp;
 
 int generator( void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames,
