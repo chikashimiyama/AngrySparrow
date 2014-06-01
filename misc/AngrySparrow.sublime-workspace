@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"vec",
+				"vector	std::vector"
+			],
+			[
+				"num",
+				"numSamps"
+			],
+			[
+				"i",
+				"it	chikashi style c++ vector iterator"
+			],
+			[
+				"fo",
+				"fo	Chikashi style for loop"
+			],
+			[
+				"en",
+				"envelope"
+			],
+			[
+				"att",
+				"attackInSamps"
+			],
+			[
+				"for",
+				"for	For Loop"
+			],
+			[
+				"re",
+				"releaseInSamps"
+			],
+			[
+				"dec",
+				"decayInSamps"
+			],
+			[
+				"at",
+				"attackInSamps"
+			],
+			[
 				"I",
 				"Interpolation"
 			],
@@ -108,10 +148,6 @@
 				"libspatdif"
 			],
 			[
-				"i",
-				"it	c++ vector iterator"
-			],
-			[
 				"in",
 				"include"
 			],
@@ -142,10 +178,6 @@
 			[
 				"next",
 				"nextEventTime"
-			],
-			[
-				"re",
-				"reports"
 			],
 			[
 				"con",
@@ -218,10 +250,6 @@
 			[
 				"getEven",
 				"getEventSets"
-			],
-			[
-				"en",
-				"entityOne"
 			],
 			[
 				"SD_MEDI",
@@ -328,10 +356,6 @@
 				"spatdif_interpret"
 			],
 			[
-				"num",
-				"numAtoms"
-			],
-			[
 				"getA",
 				"getAddressAsString"
 			],
@@ -342,10 +366,6 @@
 			[
 				"address",
 				"addressVector"
-			],
-			[
-				"for",
-				"forwardOSCMessage"
 			],
 			[
 				"removeAll",
@@ -374,10 +394,6 @@
 			[
 				"getArgument",
 				"getArgumentAsString"
-			],
-			[
-				"fo",
-				"forwardOSCMessage"
 			],
 			[
 				"sd",
@@ -411,56 +427,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/Users/chikashi/Development/spatdiflib/src/C/sdcDate.c",
-			"settings":
-			{
-				"buffer_size": 1524,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "AngrySparrow.sublime-project",
-			"settings":
-			{
-				"buffer_size": 486,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/LowPass.h",
-			"settings":
-			{
-				"buffer_size": 1174,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/HighPass.h",
-			"settings":
-			{
-				"buffer_size": 1179,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Package Control Messages\n========================\n\nDoxyDoc:\n-------\n\n  ====================\n       Change-log\n  ====================\n  \n  Thanks for downloading this package!\n  \n  Changes from v1.0.3 to v1.1.0 include:\n  \n  - Fix bug that made classes be rendered as functions sometimes.\n  - Removed extraneous @relates input since Doxygen does this automatically.\n  - Add new setting for the maximum number of lines to parse.\n  - Maximum number of lines has changed from 25 to 5.\n  - Fix bug when function parameters involved a variadic template.\n  \n  \n  As always, if you find any bugs or would like to submit a patch, make sure\n  to look at the repository on GitHub: https://github.com/Rapptz/DoxyDoc\n  \n",
-			"settings":
-			{
-				"buffer_size": 707,
-				"line_ending": "Unix",
-				"name": "Package Control Messages",
-				"scratch": true
-			}
-		},
-		{
-			"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/AngrySparrow.h",
-			"settings":
-			{
-				"buffer_size": 432,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Angry",
 	"command_palette":
@@ -478,11 +444,23 @@
 			],
 			[
 				"git add",
-				"Git: Add..."
+				"Git: Add Current File"
+			],
+			[
+				"git ",
+				"Git: Commit"
 			],
 			[
 				"c++",
 				"Set Syntax: C++"
+			],
+			[
+				"git rm",
+				"Git: Merge Branch"
+			],
+			[
+				"git status",
+				"Git: Status"
 			],
 			[
 				"git c",
@@ -499,14 +477,6 @@
 			[
 				"previe",
 				"OmniMarkupPreviewer: Preview Current Markup in Browser"
-			],
-			[
-				"git ",
-				"Git: Commit"
-			],
-			[
-				"git status",
-				"Git: Status"
 			],
 			[
 				"build",
@@ -654,15 +624,25 @@
 	},
 	"file_history":
 	[
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Const.h",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/lowpass.cpp",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/fm.cpp",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Butterworth.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Envelope.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/envelope.cpp",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/Makefile",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/envelop.out",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Const.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/AngrySparrow.h",
+		"/Users/chikashi/Development/spatdiflib/src/C/sdcDate.c",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/misc/AngrySparrow.sublime-project",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/ramp.cpp",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/lowpass.cpp",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/highpass.cpp",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/LowPass.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/HighPass.h",
 		"/Users/chikashi/Development/spatdiflib/src/sdDate.h",
 		"/Users/chikashi/Development/spatdiflib/src/C/sdcDate.h",
 		"/Users/chikashi/Development/spatdiflib/src/C/Makefile",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/AngrySparrow.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/wavetable.cpp",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Butterworth.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Oscillator.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/EnvPlay.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/EnvGen.h",
@@ -676,15 +656,12 @@
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Sine.h",
 		"/Users/chikashi/Works/Event/2014/Interface-Entwicklung_ZHDK_2014/Klasse7/Klasse7.md",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/onepole.cpp",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/fm.cpp",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Rect.h",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/ramp.cpp",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Noise.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/UnitGenerator.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/rect.cpp",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/sine.cpp",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Multiplier.h",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/misc/AngrySparrow.sublime-project",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/.gitignore",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Adder.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/DSP.h",
@@ -774,14 +751,7 @@
 		"/Users/chikashi/Works/Event/2014/Interface-Entwicklung_ZHDK_2014/Klasse4/Klasse4.md",
 		"/Users/chikashi/Works/Event/2014/Interface-Entwicklung_ZHDK_2014/Klasse5/Klasse5",
 		"/Users/chikashi/Works/Event/2014/Interface-Entwicklung_ZHDK_2014/Klasse6/Klasse6",
-		"/Users/chikashi/Development/spatdifrenderer/Papers/ICMC_paper/icmcsmc2014template.tex",
-		"/Users/chikashi/Development/spatdiflib/examples/generated-scene-time.xml",
-		"/Users/chikashi/Development/spatdiflib/src/bin/SpatDIFLib/Build/Intermediates/SpatDIFLibExample.build/Debug/SpatDIFLibExample.build/SpatDIFLibExample-own-target-headers.hmap",
-		"/Users/chikashi/Development/spatdiflib/src/bin/SpatDIFLib/Build/Intermediates/SpatDIFLibExample.build/Debug/SpatDIFLibExample.build/SpatDIFLibExample-all-target-headers.hmap",
-		"/Users/chikashi/Development/spatdiflib/examples/sdOSCConverterTest.cpp",
-		"/Users/chikashi/Development/spatdiflib/examples/sdLoaderTest.cpp",
-		"/Users/chikashi/Development/spatdiflib/examples/sdSaverTest.cpp",
-		"/Users/chikashi/Development/spatdiflib/src/bin/libspatdif/Index/Debug/macosx10.9-x86_64/libspatdif.xcindex/db.xcindexdb.strings-res"
+		"/Users/chikashi/Development/spatdifrenderer/Papers/ICMC_paper/icmcsmc2014template.tex"
 	],
 	"find":
 	{
@@ -799,6 +769,11 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"wavetable",
+			"attack",
+			"EnvGen",
+			"coefVec",
+			"lowpass",
 			"LowPass",
 			"onepole",
 			"OnePole",
@@ -921,12 +896,7 @@
 			"first",
 			"entity",
 			"eventSet",
-			"mul",
-			"getNextEvent",
-			"vector",
-			"extension",
-			"createEventSet",
-			"getNextEventSet"
+			"mul"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -944,184 +914,8 @@
 	"groups":
 	[
 		{
-			"selected": 3,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/Users/chikashi/Development/spatdiflib/src/C/sdcDate.c",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1524,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "AngrySparrow.sublime-project",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 486,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/LowPass.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1174,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								1174
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/HighPass.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1179,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								255,
-								255
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 707,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								707,
-								707
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/AngrySparrow.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 432,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								372,
-								372
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 159.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1158,7 +952,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 271.0
+		"height": 211.0
 	},
 	"output.find_results":
 	{

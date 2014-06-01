@@ -27,4 +27,7 @@
 	#include "Ramp.h"
 
  	#include "Interpolation.h"
+
+ 	#include "EnvGen.h"
+ 	#include "Play.h"
 #endif
