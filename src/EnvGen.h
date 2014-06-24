@@ -19,7 +19,7 @@ namespace AngrySparrow{
 		std::vector<float> env;
 		int numValues = values->size();
 		int numTimes = times->size();
-		if(numTimes == numValues - 1){
+		if(numTimes != numValues - 1){
 			std::cout << "Play: invalid number of arguments. Values:" << numValues << " Times:" << numTimes << std::endl; 
 			return env;
 		}
@@ -31,6 +31,7 @@ namespace AngrySparrow{
 			unsigned long numSamps = secondToSample(tm);
 			timesInSamps.push_back(numSamps);
 			totalSamps += numSamps;
+			it++;
 		}
 		env.reserve(totalSamps);
 		unsigned long envCount = 0;

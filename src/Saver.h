@@ -3,20 +3,15 @@
  * @authors Chikashi Miyama
  */
 
-#ifndef LowPass_h
-#define LowPass_h
-
-#include <cmath>
-#include "Const.h"
-#include "UnitGenerator.h"
 
 namespace AngrySparrow {
     
     /**
      * @brief 1st oreder butterworth filter
      */
-     class LowPass: public UnitGenerator{
-     protected:
+
+	class Saver: public UnitGenerator{
+    protected:
         float z;
         std::vector<float> *cutoffVectorPtr; ///< a reference to a vector of frequencies
 

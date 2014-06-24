@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"ve",
+				"vector	std::vector"
+			],
+			[
+				"posi",
+				"positionVectorPtr"
+			],
+			[
 				"vec",
 				"vector	std::vector"
 			],
@@ -74,10 +82,6 @@
 			[
 				"wa",
 				"wavetable"
-			],
-			[
-				"ve",
-				"vector	std::vector"
 			],
 			[
 				"coefv",
@@ -427,6 +431,41 @@
 	},
 	"buffers":
 	[
+		{
+			"contents": "/**\n * @ingroup AngrySparrow\n * @authors Chikashi Miyama\n */\n\n#ifndef Play_h\n#define Play_h\n\n#include \"Interpolation.h\"\n#include \"UnitGenerator.h\"\n\nnamespace AngrySparrow {\n\n	/**\n	 * @brief playback a vector using a position vector\n	 * \n	 */\n	class Play: public Interpolation, public UnitGenerator{\n	protected:\n		std::vector<float> *positionVectorPtr;\n\n	public:\n\n		Play(std::vector<float> *tvp, std::vector<float> *pvp, std::vector<float> *tbp):UnitGenerator(tvp), Interpolation(tbp), positionVectorPtr(pvp){};\n		void performDSP();\n	};\n\n	inline void Play::performDSP(){\n\n		for (int i = 0; i < vectorSize; i++) {\n			int index = static_cast<int>((*positionVectorPtr)[i]); // implement interpolation later\n			(*targetVectorPtr)[i] = (*tablePointer)[index];\n        }\n	}\n}\n\n#endif",
+			"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/Play.h",
+			"file_size": 776,
+			"file_write_time": 130461711390000000,
+			"settings":
+			{
+				"buffer_size": 776,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/EnvGen.h",
+			"settings":
+			{
+				"buffer_size": 1267,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/Makefile",
+			"settings":
+			{
+				"buffer_size": 1255,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/Saver.h",
+			"settings":
+			{
+				"buffer_size": 1041,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Angry",
 	"command_palette":
@@ -439,7 +478,7 @@
 				"Git: Push"
 			],
 			[
-				"git commit",
+				"git ",
 				"Git: Commit"
 			],
 			[
@@ -447,7 +486,11 @@
 				"Git: Add Current File"
 			],
 			[
-				"git ",
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"git commit",
 				"Git: Commit"
 			],
 			[
@@ -543,10 +586,6 @@
 				"Git: Status"
 			],
 			[
-				"git co",
-				"Git: Commit"
-			],
-			[
 				"git com",
 				"Git: Commit"
 			],
@@ -624,20 +663,28 @@
 	},
 	"file_history":
 	[
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Loader.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/LowPass.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Interpolation.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/envelope.cpp",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/AngrySparrow.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/EnvGen.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/Makefile",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Ramp.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/UnitGenerator.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/play.cpp",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Const.h",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/ramp.cpp",
+		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Play.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/fm.cpp",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Butterworth.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Envelope.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/envelope.cpp",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/Makefile",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/envelop.out",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Const.h",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/AngrySparrow.h",
 		"/Users/chikashi/Development/spatdiflib/src/C/sdcDate.c",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/misc/AngrySparrow.sublime-project",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/ramp.cpp",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/lowpass.cpp",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/highpass.cpp",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/LowPass.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/HighPass.h",
 		"/Users/chikashi/Development/spatdiflib/src/sdDate.h",
 		"/Users/chikashi/Development/spatdiflib/src/C/sdcDate.h",
@@ -645,20 +692,16 @@
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/wavetable.cpp",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Oscillator.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/EnvPlay.h",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/EnvGen.h",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Interpolation.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Phasor.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/WaveTable.h",
 		"/Users/chikashi/Works/Event/2014/Interface-Entwicklung_ZHDK_2014/Klasse6/Klasse6.md",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/ExpRamp.h",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Ramp.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/OnePole.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Sine.h",
 		"/Users/chikashi/Works/Event/2014/Interface-Entwicklung_ZHDK_2014/Klasse7/Klasse7.md",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/onepole.cpp",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Rect.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Noise.h",
-		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/UnitGenerator.h",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/rect.cpp",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/sine.cpp",
 		"/Users/chikashi/Development/oFProjects/AngrySparrow/src/Multiplier.h",
@@ -747,11 +790,7 @@
 		"/Users/chikashi/Development/spatdifrenderer/spatdiflib/src/sdOSCResponder.cpp",
 		"/Users/chikashi/Development/spatdiflib/src/sdSaver.h",
 		"/Users/chikashi/Development/spatdiflib/src/sdScene.cpp",
-		"/Users/chikashi/Development/spatdiflib/src/sdScene.h",
-		"/Users/chikashi/Works/Event/2014/Interface-Entwicklung_ZHDK_2014/Klasse4/Klasse4.md",
-		"/Users/chikashi/Works/Event/2014/Interface-Entwicklung_ZHDK_2014/Klasse5/Klasse5",
-		"/Users/chikashi/Works/Event/2014/Interface-Entwicklung_ZHDK_2014/Klasse6/Klasse6",
-		"/Users/chikashi/Development/spatdifrenderer/Papers/ICMC_paper/icmcsmc2014template.tex"
+		"/Users/chikashi/Development/spatdiflib/src/sdScene.h"
 	],
 	"find":
 	{
@@ -769,6 +808,11 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"playVec",
+			"play",
+			"envelope",
+			"Envelope",
+			"performDSP",
 			"wavetable",
 			"attack",
 			"EnvGen",
@@ -891,12 +935,7 @@
 			"next",
 			"Next",
 			"getNextEventTime",
-			"getNextEvent",
-			"getFirstEventTime",
-			"first",
-			"entity",
-			"eventSet",
-			"mul"
+			"getNextEvent"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -914,8 +953,125 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/Play.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 776,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								70,
+								76
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/EnvGen.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1267,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								244,
+								244
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/examples/src/Makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1255,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								305,
+								305
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/chikashi/Development/oFProjects/AngrySparrow/src/Saver.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1041,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								166,
+								166
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -973,6 +1129,22 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"p",
+				"src/Play.h"
+			],
+			[
+				"en",
+				"src/Envelope.h"
+			],
+			[
+				"e",
+				"examples/src/envelope.cpp"
+			],
+			[
+				"env",
+				"src/Envelope.h"
+			],
 			[
 				"noi",
 				"src/Noise.h"
